@@ -1,0 +1,58 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Pizza{
+    public void prepare();
+    public void bake();
+    public void cut();
+    public void box();
+}
+
+BeijingGreekPizza --|> Pizza
+BeijingCheesePizza --|> Pizza
+HebeiGreekPizza --|> Pizza
+HebeiCheesePizza --|> Pizza
+SimpleFactoryPizza --> Pizza
+PizzaStore1 --o SimpleFactoryPizza
+PizzaStore2 --o SimpleFactoryPizza
+
+BeijingFactoryPizza --|> SimpleFactoryPizza
+HeBeiFactoryPizza --|> SimpleFactoryPizza
+BeijingFactoryPizza --> Pizza
+BeijingFactoryPizza --> BeijingCheesePizza
+BeijingFactoryPizza --> BeijingGreekPizza
+
+HeBeiFactoryPizza --> Pizza
+HeBeiFactoryPizza --> HebeiGreekPizza
+HeBeiFactoryPizza --> HebeiCheesePizza
+
+class BeijingGreekPizza{
+}
+class HebeiGreekPizza{
+}
+
+
+class BeijingCheesePizza{
+}
+class HebeiCheesePizza{
+}
+
+class PizzaStore1{
+    public void orderPizza()
+}
+
+class PizzaStore2{
+    public void orderPizza()
+}
+
+abstract class SimpleFactoryPizza{
+    public abstract Pizza createPizza(){}
+}
+
+class BeijingFactoryPizza{
+    public Pizza createPizza(){}
+}
+class HeBeiFactoryPizza{
+    public Pizza createPizza(){}
+}
+@enduml
