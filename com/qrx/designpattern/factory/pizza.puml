@@ -16,15 +16,15 @@ SimpleFactoryPizza --> Pizza
 PizzaStore1 --o SimpleFactoryPizza
 PizzaStore2 --o SimpleFactoryPizza
 
-BeijingFactoryPizza --|> SimpleFactoryPizza
-HeBeiFactoryPizza --|> SimpleFactoryPizza
-BeijingFactoryPizza --> Pizza
-BeijingFactoryPizza --> BeijingCheesePizza
-BeijingFactoryPizza --> BeijingGreekPizza
+BeijingCheeseFactoryPizza --|> SimpleFactoryPizza
+BeijingGreekFactoryPizza --|> SimpleFactoryPizza
+HebeiCheeseFactoryPizza --|> SimpleFactoryPizza
+HeBeiGreekFactoryPizza --|> SimpleFactoryPizza
+BeijingCheeseFactoryPizza --> BeijingCheesePizza
+BeijingGreekFactoryPizza --> BeijingGreekPizza
 
-HeBeiFactoryPizza --> Pizza
-HeBeiFactoryPizza --> HebeiGreekPizza
-HeBeiFactoryPizza --> HebeiCheesePizza
+HeBeiGreekFactoryPizza --> HebeiGreekPizza
+HeBeiCheeseFactoryPizza --> HebeiCheesePizza
 
 class BeijingGreekPizza{
 }
@@ -49,10 +49,16 @@ abstract class SimpleFactoryPizza{
     public abstract Pizza createPizza(){}
 }
 
-class BeijingFactoryPizza{
+class BeijingGreekFactoryPizza{
     public Pizza createPizza(){}
 }
-class HeBeiFactoryPizza{
+class BeijingCheeseFactoryPizza{
+    public Pizza createPizza()
+}
+class HeBeiGreekFactoryPizza{
     public Pizza createPizza(){}
+}
+class HebeiCheeseFactoryPizza{
+    public Pizza createPizza()
 }
 @enduml

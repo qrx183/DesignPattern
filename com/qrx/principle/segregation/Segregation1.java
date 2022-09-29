@@ -2,6 +2,7 @@ package com.qrx.principle.segregation;
 
 /**
  * 接口隔离原则实例1(违反接口隔离原则)
+ *
  * @author qiu
  * @version 1.8.0
  */
@@ -87,31 +88,35 @@ class D implements Interface1 {
 /**
  * A类依赖于类B,且只使用接口1中的方法1,2,3
  */
-class A{
-    public void depend1(Interface1 i){
+class A {
+    public void depend1(Interface1 i) {
         i.func1();
     }
-    public void depend2(Interface1 i){
+
+    public void depend2(Interface1 i) {
         i.func2();
     }
-    public void depend3(Interface1 i){
+
+    public void depend3(Interface1 i) {
         i.func3();
     }
 }
 
 /**
  * C类依赖于类D,且只使用接口1中的方法1,3,5
- *
+ * <p>
  * 上述这种接口的设计不满足接口隔离原则,即一个类对另一个类的依赖没有建立在最小的接口上,应该将接口进行分解
  */
-class C{
-    public void depend1(Interface1 i){
+class C {
+    public void depend1(Interface1 i) {
         i.func1();
     }
-    public void depend5(Interface1 i){
+
+    public void depend5(Interface1 i) {
         i.func5();
     }
-    public void depend3(Interface1 i){
+
+    public void depend3(Interface1 i) {
         i.func3();
     }
 }

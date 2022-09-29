@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface interface{
+    void func1()
+    void func2()
+    void func3()
+    void func4()
+    void func5()
+}
+class A{
+    public
+}
+@enduml
