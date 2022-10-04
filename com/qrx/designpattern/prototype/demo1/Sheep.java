@@ -1,6 +1,4 @@
-package com.qrx.designpattern.prototype;
-
-import java.util.Calendar;
+package com.qrx.designpattern.prototype.demo1;
 
 /**
  * @author qiu
