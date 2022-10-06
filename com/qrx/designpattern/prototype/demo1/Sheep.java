@@ -57,11 +57,10 @@ public class Sheep implements Cloneable{
     }
 
     public static void main(String[] args) throws CloneNotSupportedException {
-//        Sheep sheep = new Sheep("first","white",8);
-//        Sheep sheep1 = (Sheep)sheep.clone();
-//        Sheep sheep2 = (Sheep)sheep.clone();
-//        System.out.println(sheep1 == sheep);
-//        System.out.println(sheep1.getColor() == sheep.getColor());
+        Sheep sheep = new Sheep("first","white",8);
+        Sheep sheep1 = (Sheep)sheep.clone();
+        Sheep sheep2 = (Sheep)sheep.clone();
+        System.out.println(sheep1 == sheep);
 
     }
 }
